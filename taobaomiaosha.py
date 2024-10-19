@@ -2,7 +2,6 @@ import datetime
 import time
 from DrissionPage import ChromiumPage
 
-# 创建对象
 page = ChromiumPage()
 
 # 指定秒杀时间（转换为datetime对象）
@@ -32,7 +31,6 @@ while True:
             time.sleep(60)
         # 当间隔小于10分钟不输出时间，等待抢购
         elif not wait_for_buy:
-            print(time_diff)
             print("当前间隔小于10分钟，不输出时间，等待抢购")
             page.refresh()
             # 点击购物车
